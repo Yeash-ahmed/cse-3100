@@ -1,8 +1,12 @@
 import { Outlet, Route, Routes } from 'react-router';
 import BaseLayout from './views/BaseLayout';
 import Home from './views/Home';
-import AboutUs from './views/AboutUs'
 import AvailableCats from './views/AvailableCats';
+
+import AboutUs from './Pages/AboutUs';
+import ContactUs from './Pages/ContactUs';
+import SeeMoreMission from './Pages/SeeMoreMission';
+import SeeMoreHistory from './Pages/SeeMoreHistory'
 
 function App() {
   return (
@@ -15,8 +19,11 @@ function App() {
         }
       >
         <Route path={'/'} element={<Home />} />
-        <Route path={'/about'} element={<AboutUs />} />
         <Route path={'/available-cats'} element={<AvailableCats />} />
+        <Route path={'/AboutUs'} element={<AboutUs/>}/>
+        <Route path={'/Contact-us'} element={<ContactUs/>}/>
+        <Route path={'/History'} element={<SeeMoreHistory/>}/>
+        <Route path={'/Mission'} element={<SeeMoreMission/>}/>
       </Route>
     </Routes>
   );
